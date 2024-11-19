@@ -1,0 +1,68 @@
+@function random-color-stop($base-color, $variation-range: 10%) {
+  $red: red($base-color);
+  $green: green($base-color);
+  $blue: blue($base-color);
+
+  @return rgba(
+                  max(0, min(255, $red + random($variation-range * 2) - $variation-range)),
+                  max(0, min(255, $green + random($variation-range * 2) - $variation-range)),
+                  max(0, min(255, $blue + random($variation-range * 2) - $variation-range)),
+                  0.8
+  );
+}
+
+@mixin dark-gradient-background($base-dark: #121212, $accent-dark: #1E1E1E) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+                  135deg,
+                  random-color-stop($base-dark, 15%),
+                  random-color-stop($accent-dark, 15%),
+                  darken($base-dark, 5%),
+                  darken($accent-dark, 10%)
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// Usage example for full-page background
+body {
+  margin: 0;
+  min-height: 100vh;
+  @include dark-gradient-background();
+  color: rgba(255,255,255,0.87);
+  font-family: 'Arial', sans-serif;
+}
+
+// Optional: Overlay for additional depth
+.gradient-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+                  circle at center,
+                  transparent 0%,
+                  rgba(0,0,0,0.3) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}

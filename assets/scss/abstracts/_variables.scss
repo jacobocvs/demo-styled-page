@@ -1,0 +1,29 @@
+$property-prefix: theme !default;
+
+// Primary colors
+$primary: #382bf0 !default;
+$secondary: #ffc107 !default;
+$accent: #ffc9e1 !default;
+
+// Semantic colors
+$white: hsl(100, 100%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark: hsl(0, 0%, 7.1%);
+
+$success: hsl(145, 100%, 39%);
+$muted: #52595f;
+$warning: hsl(40, 100%, 50%);
+$info: hsl(240, 100%, 37%);
+$danger: hsl(354, 73%, 51%);
+
+$primary-colors: (
+        'primary': $primary,
+        'secondary': $secondary,
+        'accent': $accent,
+        'overlay': $black,
+        'success': $success,
+        'info': $info,
+        'warning': $warning,
+        'danger': $danger,
+        'muted': $muted,
+);
