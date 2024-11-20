@@ -28,6 +28,85 @@ $primary-colors: (
         'muted': $muted,
 );
 
+// Background
+
+$crimson: rgb(220, 20, 60);
+$dark-red: rgb(139, 0, 0);
+
+$pink: rgb(255, 192, 203);
+$pale-violet: rgb(219, 112, 147);
+
+$light-salmon: rgb(255, 160, 122);
+$coral: rgb(255, 127, 80);
+$orange-red: rgb(255, 69, 0);
+$orange: rgb(255, 165, 0);
+
+$gold: rgb(255, 215, 0);
+$yellow: rgb(255, 255, 0);
+$light-yellow: 	rgb(255, 255, 224);
+$khaki: rgb(240, 230, 140);
+$dark-khaki: rgb(189, 183, 107);
+
+$lavender: rgb(230, 230, 250);
+$violet: rgb(238, 130, 238);
+$rebecca-purple: rgb(102, 51, 153);
+$dark-magenta: rgb(139, 0, 139);
+$purple: rgb(128, 0, 128);
+$indigo: rgb(75, 0, 130);
+$dark-slate-blue: rgb(72, 61, 139);
+
+$lime-green: rgb(50, 205, 50);
+$medium-sea-green: rgb(60, 179, 113);
+$sea-green: rgb(46, 139, 87);
+$green: rgb(0, 128, 0);
+$dark-green: rgb(0, 100, 0);
+$olive: rgb(128, 128, 0);
+$dark-olive: rgb(85, 107, 47);
+$black-olive: rgb(33, 33, 33);
+$dark-cyan: rgb(0, 139, 139);
+$teal: rgb(0, 128, 128);
+
+$aqua: rgb(0, 255, 255);
+$cyan: rgb(0, 255, 255);
+$light-cyan: rgb(224, 255, 255);
+$steel-blue: rgb(70, 130, 180);
+$light-steel-blue: rgb(176, 196, 222);
+$sky-blue: rgb(135, 206, 235);
+$royal-blue: rgb(65, 105, 225);
+$blue: rgb(0, 0, 255);
+$dark-blue: rgb(0, 0, 139);
+$navy: rgb(0, 0, 128);
+$midnight-blue: rgb(25, 25, 112);
+$oxford-blue: rgb(33, 42, 55);
+
+$wheat: rgb(245, 222, 179);
+$sandy-brown: rgb(244, 164, 96);
+$dark-golden-rod: rgb(184, 134, 11);
+$chocolate: rgb(210, 105, 30);
+$saddle-brown: rgb(139, 69, 19);
+$sienna: rgb(160, 82, 45);
+$brown: rgb(165, 42, 42);
+$maroon: rgb(128, 0, 0);
+
+$rich-black: rgb(10, 10, 10);
+$obsidian: rgb(11, 18, 21);
+$oil-black: rgb(12, 12, 12);
+$black-chocolate: rgb(16, 13, 8);
+$smoky-black: rgb(16, 23, 32);
+$arsenic: rgb(17, 24, 28);
+$charcoal-gray: rgb(18, 18, 18);
+$jet-black: rgb(22, 22, 24);
+$iridium: rgb(24, 24, 24);
+$dark-slate-gray: rgb(25, 25, 25);
+$coffee-bean: rgb(27, 27, 27);
+$gunmetal: rgb(29, 31, 33);
+$eerie-black: rgb(33, 32, 35);
+$charleston-green: rgb(33, 33, 36);
+$outer-space: rgb(37, 37, 37);
+$dark-gray: rgb(33, 36, 39);
+$ebony: rgb(34, 36, 40);
+$jet: rgb(42, 42, 42);
+
 // Gradients
 
 $gradient-primary: #000000, #434343;
@@ -43,5 +122,4 @@ $gradient-orca: #44A08D, #093637;
 $gradient-red-ocean: #1d4350, #a43931;
 $gradient-fresh: #f1f2b5, #135058;
 $gradient-man-of-steel: #780206, #061161;
-
 
