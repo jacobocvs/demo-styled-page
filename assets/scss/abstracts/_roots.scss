@@ -1,126 +1,117 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
-body {
-  color: white;
-  font-family: 'Dongle', sans-serif;
+@layer abstracts.tokens {
+  :root {
+    /* basic colors */
+    --theme-background: var(--theme-surface-a0);
+    --theme-on-background: 18, 18, 18;
+
+    /* on background colors */
+    --theme-on-primary: #000000;
+    --theme-on-primary-inverse: #ffffff;
+    --theme-on-primary-container: #ffffff;
+    --theme-on-secondary: #000000;
+    --theme-on-secondary-inverse: #ffffff;
+
+    --theme-primary-rgba: v.$primary;
+
+     /* primary rgba colors */
+    @include m.primary-rgba-colors();
+  }
+
+}
+
+section {
+  min-height: 480px;
+  min-width: 60vh;
+  width: 100vw;
   height: 100vh;
-  margin: 0;
+  position: relative;
 }
 
-//html, body {
-//  font-family: 'Dongle', sans-serif;
-//  margin: 0;
-//  padding: 0;
-//}
-//
-:root {
-  --color1: 18, 113, 255;
-  --color2: 221, 74, 255;
-  --color3: 100, 220, 255;
-  --color4: 200, 50, 50;
-  --color5: 180, 180, 50;
-  --color-interactive: 140, 100, 255;
-  --circle-size: 50%;
-  --blending: hard-ligth;
+.gradient_container {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  animation: rtt 20s linear infinite;
 }
 
-@keyframes moveInCircle {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
+@keyframes rtt {
+  to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes moveVertical {
-  0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
+.box {
+  width: 50%;
+  height: 50%;
+  filter: blur(140px);
 }
 
-@keyframes moveHorizontal {
-  0% {
-    transform: translateX(-50%)
-  }
-  50% {
-    transform: translateX(50%)
-  }
-  100% {
-    transform: translateX(-50%)
-  }
+.box:nth-child(1) {
+  background: v.$dark-red;
 }
 
-.gradient-bg {
+.box:nth-child(2) {
+  background: #200122;
+}
+
+.box:nth-child(3) {
+  background: #200122;
+}
+
+.box:nth-child(4) {
+  background: v.$maroon;
+}
+
+.content {
+  position: absolute;
+  top: 0;
   width: 100vw;
   height: 100vh;
-  position: absolute;
-  overflow: hidden;
-  background: linear-gradient(to bottom, v.$gradient-primary),
-  linear-gradient(to bottom, v.$gradient-orca);
-  background-blend-mode: multiply;
-  top: 0;
-  left: 0;
-
-  svg {
-    display: none;
-  }
-
-  .gradient-container {
-    width: 100%;
-    height: 100%;
-  }
-
-
-  .g1 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color1), 0.3) 0%, rgba(var(--color1), 0) 50%);
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2 + 50%);
-    left: calc(50% - var(--circle-size) / 2 + 20%);
-
-    opacity: 1;
-  }
-
-  .g2 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(29, 67, 80, 0.2) 0%, rgba(29, 67, 80, 0) 50%);
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2 + 200px);
-    left: calc(50% - var(--circle-size) / 2 + 500px);
-
-    opacity: 1;
-  }
-
-  //.interactive {
-  //  position: absolute;
-  //  background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
-  //  mix-blend-mode: var(--blending);
-  //  z-index: -1;
-  //
-  //  width: 50%;
-  //  height: 50%;
-  //  top: -25%;
-  //  left: -25%;
-  //
-  //  opacity: 1;
-  //}
+  display: grid;
+  place-content: center;
 }
 
+.config {
+  margin-inline: auto;
+
+  max-width: 640px;
+  width: 80vw;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+i {
+  position: absolute;
+  bottom: 140px;
+  right: 220px;
+}
+
+a {
+  position: relative;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: -20px;
+  height: 3px;
+  width: 85px;
+  transform: scaleX(0);
+  background: #fff;
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
 

@@ -1,0 +1,63 @@
+@use 'variables' as v;
+
+@layer reset.reboot {
+
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      color: #fff;
+      cursor: default;
+      font-family: "Poppins", sans-serif;
+    }
+
+    html {
+      color-scheme: dark;
+      scroll-behavior: smooth
+    }
+  }
+  ::selection {
+    background-color: rgba(var(theme-primary-rgba), .41);
+  }
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: v.$black;
+    background-blend-mode: multiply;
+    overflow: hidden;
+  }
+
+
+  // Sections
+  body {
+    margin: 0;
+
+    font-family: v.$font-secondary;
+    font-weight: v.$fw-400;
+
+    color: var(--theme-on-primary);
+    font-size: 14px;
+
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+
+    // Prevents overflow when a dialog is open
+    &:has(.dialog[open]) {
+      overflow-y: hidden;
+    }
+
+    // Prevent an overflow issue when the page has a transition
+    &:has(.slide-enter-active, .slide-leave-active) {
+      overflow-x: hidden;
+    }
+
+    // Prevent an overflow when a mobile menu is open
+    &:has(.v-popper__popper--no-positioning) {
+      overflow-y: hidden;
+    }
+  }
+}

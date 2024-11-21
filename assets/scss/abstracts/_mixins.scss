@@ -1,0 +1,14 @@
+@use "variables" as v;
+@use "functions" as f;
+
+/*
+* RGBA colors
+* Generate rgba colors method using @hexToRgb function
+*/
+@mixin primary-rgba-colors() {
+  & {
+    @each $color, $value in v.$primary-colors {
+      --#{v.$property-prefix}#{$color}-rgba: #{f.hexToRgb($value)};
+    }
+  }
+}
