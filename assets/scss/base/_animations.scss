@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as v;
+
+/* Sparkle Animation */
+@keyframes sparkle-animation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sparkle {
+  position: absolute;
+  height: 240px;
+  width: 220px;
+  background: linear-gradient(45deg,v.$light-steel-blue,#fe7496);
+  mask:
+          radial-gradient(#0000 71%,#000 72% var(--_b,))
+          10000% 10000%/99.5% 99.5%;
+  transition: all;
+  //z-index: 999;
+}
+
+.sparkle:hover {
+  animation: sparkle-animation 2s ease-out infinite;
+}

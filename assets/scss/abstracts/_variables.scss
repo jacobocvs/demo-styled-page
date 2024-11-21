@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 $property-prefix: theme !default;
 
 // Primary colors
@@ -126,8 +124,8 @@ $gradient-fresh: #f1f2b5, #135058;
 $gradient-man-of-steel: #780206, #061161;
 
 // Fonts
-$font-primary: "Popins", sans-serif;
-$font-secondary: "Popins", sans-serif;
+$font-primary: "Noto Sans", sans-serif;
+$font-secondary: "Source Code Pro", sans-serif;
 
 // Font weights
 
@@ -246,15 +244,15 @@ $border-radius: (
         50: 50px
 );
 
-$rounded-none: map-get($border-radius, 0);
-$rounded-sm: map-get($border-radius, 6);
-$rounded-md: map-get($border-radius, 8);
-$rounded-lg: map-get($border-radius, 12);
-$rounded-xl: map-get($border-radius, 25);
-$rounded-full: map-get($border-radius, 50);
-
-$card-border-radius: $rounded-md;
-$form-border-radius: $rounded-sm;
+//$rounded-none: map-get($border-radius, 0);
+//$rounded-sm: map-get($border-radius, 6);
+//$rounded-md: map-get($border-radius, 8);
+//$rounded-lg: map-get($border-radius, 12);
+//$rounded-xl: map-get($border-radius, 25);
+//$rounded-full: map-get($border-radius, 50);
+//
+//$card-border-radius: $rounded-md;
+//$form-border-radius: $rounded-sm;
 
 // Borders
 $form-border: 1px;
